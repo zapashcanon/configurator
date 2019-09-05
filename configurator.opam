@@ -6,12 +6,12 @@ bug-reports: "https://github.com/janestreet/configurator/issues"
 dev-repo: "git+https://github.com/janestreet/configurator.git"
 license: "MIT"
 build: [
-  ["jbuilder" "build" "-p" name "-j" jobs]
+  ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
   "base"
   "stdio"
-  "jbuilder" {build & >= "1.0+beta18.1"}
+  "dune" {build & >= "1.0"}
 ]
 available: [ ocaml-version >= "4.04.2" ]
 descr: "
